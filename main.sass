@@ -1,0 +1,179 @@
+
+$primary: #1c7ed6
+$primary_light: #339af0
+$primary_dark: #1864ab
+
+$secondary: #c2255c
+$secondary_light: #d6336c
+$secondary_dark: #a61e4d
+
+$surface: #495057
+$surface_dark: #212529
+$background: #dee2e6
+
+
+*
+	padding: 0
+	margin: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+body
+	text-align: center
+	font-family: 'roboto',arial
+	font-size: 14px
+	background: #f0f0f0
+h2
+	margin-top: 30px
+p
+	font-family: 'Open Sans',sans-serif
+	margin: 10px 0px
+
+.cube
+	height: 50px
+.cube_1
+	background-color: $primary_light
+.cube_2
+	background-color: $primary
+.cube_3
+	background-color: $primary_dark
+.cube_4
+	background-color: $background
+.cube_5
+	background-color: $surface
+.cube_6
+	background-color: $surface_dark
+.cube_7
+	background-color: $secondary_light
+.cube_8
+	background-color: $secondary
+.cube_9
+	background-color: $secondary_dark
+main
+	width: 95%
+	margin: 100px auto
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 20px 20px
+	justify-content: space-around
+	.container
+		width: 100%
+		height:300px
+		border-radius: 5px
+		font-size: 2em
+		align-items: center
+		display: flex
+		flex-direction: column
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,.5)
+		color: $surface
+		background-color: #fff
+		h2
+			border-radius: 5px
+		button
+			margin-top: 20px
+			border: none
+			padding: 8px 50px
+			border-radius: 3px
+			font-size: 18px
+			background-color: transparent
+			cursor: pointer
+			transition: .3s all ease
+			border: 1px solid transparent
+			box-shadow: 1px 1px 1px 1px rgba(0,0,0, .7)
+		&.card-primary
+			background-color: $primary
+			h2
+				border-bottom: 3px solid $secondary_light
+			button
+				background-color: $secondary
+				&:hover
+					background: transparent
+					border: 1px solid $secondary
+					color: $secondary	
+		&.card-secondary
+			background-color: $secondary
+			h2
+				border-bottom: 3px solid $primary_light
+			button
+				background-color: $primary_light
+				&:hover
+					background: transparent
+					border: 1px solid $primary
+					color: $primary_light
+		&.card-primary,
+		&.card-secondary
+			color: #fff
+			button
+				color: #fff
+
+
+		&.card-surface
+			h2
+				border-bottom: 2px solid $primary_light
+				color: $secondary
+			button
+				border: 1px solid $primary
+				color: $primary_light
+				&:hover
+					background-color: $primary_light
+		&.card-surface-light
+			h2
+				border-bottom: 2px solid $secondary_light
+				color: $primary
+			button
+				border: 1px solid $secondary
+				color: $secondary_light
+				&:hover
+					background-color: $secondary			
+		&.card-surface,
+		&.card-surface-light
+			background-color: $surface_dark
+			button
+				&:hover
+					color:#fff
+
+
+		&.card-light
+			h2
+				border-bottom: 2px solid $secondary_dark
+				color: $primary
+			button
+				background: $secondary
+				&:hover
+					background-color: $secondary_dark
+		&.card-light-inverter
+			h2
+				border-bottom: 2px solid $primary_dark
+				color: $secondary
+			button
+				background: $primary
+				&:hover
+					background-color: $primary_dark
+		&.card-light,
+		&.card-light-inverter
+			background-color: $background
+			button
+				color: #fff
+				&:hover
+					color: #fff
+
+		&.card-normal
+			h2
+				border-bottom: 3px solid $secondary
+			button
+				background-color: $primary
+				&:hover
+					background-color: $primary_dark
+		&.card-normal-inverter
+			h2
+				border-bottom: 3px solid $primary
+			button
+				background-color: $secondary
+				&:hover
+					background-color: $secondary_dark
+		&.card-normal,
+		&.card-normal-inverter
+			h2
+				color: $surface_dark
+			button
+				color: #fff
